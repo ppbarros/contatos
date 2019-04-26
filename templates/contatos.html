@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        footer {
+        font-size: 8pt;
+        color: black;
+        padding: 30px;
+        text-aling: bottom-center;
+        font-family: sans-serif;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Contatos</title>
 </head>
@@ -32,13 +41,16 @@
         {% endif %}
 
 
-        <td><a href="/delete/{{c[3]}}" style="font-weight: bold;">X</a></td>
+        <td align="center"><a href="/delete/{{c[3]}}" style="font-weight: bold; color: rgba(255,0,0,1); text-decoration: none;">X</a></td>
 
 
     </tr>
     {% endfor %}
 </table>
-<a href="/inserir">Inserir um novo contato</a><br>
-<a href="/">Voltar à Tela Inicial</a>
+<footer style="font-size: 10pt; padding: 20px; float: bottom-left">
+<a href="/inserir" style="color: blue; text-decoration: none; font-weight: bolder;">Inserir um novo contato</a><br>
+<a href="/" style="color: blue; text-decoration: none; font-weight: bolder;">Voltar à Tela Inicial</a>
+    <p>&copy; Pedro Paulo Rangel Gomes de Barros</p>
+</footer>
 </body>
 </html>
