@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contatos</title>
+</head>
+<body>
+<table border="1" cellpadding="5">
+    <tr>
+        <td style="font-weight: bold;">Nome</td>
+        <td style="font-weight: bold;">Telefone</td>
+        <td style="font-weight: bold;">Email</td>
+    </tr>
+    {% for c in contatos %}
+    <tr>
+        <td>{{c[0]}}</td>
+
+
+        {% if c[1] %}
+        <td>{{c[1]}}</td>
+        {% else %}
+        <td></td>
+        {% endif %}
+
+
+
+        {% if c[2] %}
+        <td>{{c[2]}}</td>
+        {% else %}
+        <td></td>
+        {% endif %}
+
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
