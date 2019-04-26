@@ -10,6 +10,7 @@
         <td style="font-weight: bold;">Nome</td>
         <td style="font-weight: bold;">Telefone</td>
         <td style="font-weight: bold;">Email</td>
+        <td style="font-weight: bold;">Deletar</td>
     </tr>
     {% for c in contatos %}
     <tr>
@@ -31,8 +32,13 @@
         {% endif %}
 
 
+        <td><a href="/delete/{{c[3]}}" style="font-weight: bold;">X</a></td>
+
+
     </tr>
     {% endfor %}
 </table>
+<a href="/inserir">Inserir um novo contato</a><br>
+<a href="/">Voltar à Tela Inicial</a>
 </body>
 </html>

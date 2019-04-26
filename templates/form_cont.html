@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inserir Contato</title>
+</head>
+<body>
+<h1>Inserir Contato</h1>
+{% if erro %}
+<h2 style="color: red;">{{erro}}</h2>
+{% endif %}
+<form action="/inserir_cont" method="post">
+    <label for="nome_id">Nome </label><input type="text" id="nome_id" name="nome"><br>
+    <label for="tel_id">Telefone </label><input type="text" id="tel_id" name="tel"><br>
+    <label for="email_id">E-mail </label><input type="email" name="email"  id="email_id"><br>
+    <input type="submit" value="Confirmar">
+
+</form>
+</body>
+</html>
