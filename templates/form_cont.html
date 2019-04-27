@@ -2,6 +2,26 @@
 <html lang="en">
 <head>
     <style>
+        h1 {
+        font-family: sans-serif;
+        }
+
+        h2 {
+        color: red;
+        font-family: sans-serif;
+        }
+
+        label {
+        font-size: 15pt;
+        font-family: sans-serif;
+        }
+
+        input#conf:hover {
+        background-color: rgba(0,140,255,0.20);
+
+        }
+
+
         footer {
         font-size: 8pt;
         color: black;
@@ -16,14 +36,23 @@
 <body>
 <h1>Inserir Contato</h1>
 {% if erro %}
-<h2 style="color: red;">{{erro}}</h2>
+<h2>{{erro}}</h2>
 {% endif %}
 <form action="/inserir_cont" method="post">
-    <label for="nome_id">Nome </label><input type="text" id="nome_id" name="nome"><br>
-    <label for="tel_id">Telefone </label><input type="text" id="tel_id" name="tel"><br>
-    <label for="email_id">E-mail </label><input type="email" name="email"  id="email_id"><br>
-    <input type="submit" value="Confirmar">
-
+    <table>
+        <tr>
+            <td align="right"><label for="nome_id">Nome </label></td><td align="center"><input type="text" id="nome_id" name="nome"></td>
+        </tr>
+        <tr>
+            <td align="right"><label for="tel_id">Telefone </label></td><td align="center"><input type="text" maxlength="9" id="tel_id" name="tel"></td>
+        </tr>
+        <tr>
+            <td align="right"><label for="email_id">E-mail </label></td><td align="center"><input type="email" name="email"  id="email_id"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input id="conf" type="submit" value="Confirmar"></td>
+        </tr>
+    </table>
 </form>
 <footer>
     <p>&copy; Pedro Paulo Rangel Gomes de Barros</p>
